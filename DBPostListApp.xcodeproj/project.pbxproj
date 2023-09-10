@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		3DAF8FB42AADFF9000EAB522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FB32AADFF9000EAB522 /* AppDelegate.swift */; };
 		3DAF8FB62AADFF9000EAB522 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FB52AADFF9000EAB522 /* SceneDelegate.swift */; };
-		3DAF8FB82AADFF9000EAB522 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FB72AADFF9000EAB522 /* ViewController.swift */; };
-		3DAF8FBB2AADFF9000EAB522 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FB92AADFF9000EAB522 /* Main.storyboard */; };
 		3DAF8FBD2AADFF9200EAB522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FBC2AADFF9200EAB522 /* Assets.xcassets */; };
 		3DAF8FC02AADFF9200EAB522 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FBE2AADFF9200EAB522 /* LaunchScreen.storyboard */; };
 		3DAF8FCB2AADFF9200EAB522 /* DBPostListAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FCA2AADFF9200EAB522 /* DBPostListAppTests.swift */; };
 		3DAF8FD52AADFF9200EAB522 /* DBPostListAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FD42AADFF9200EAB522 /* DBPostListAppUITests.swift */; };
 		3DAF8FD72AADFF9200EAB522 /* DBPostListAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FD62AADFF9200EAB522 /* DBPostListAppUITestsLaunchTests.swift */; };
+		3DAF8FE52AAE003000EAB522 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FE32AAE003000EAB522 /* LoginViewController.swift */; };
+		3DAF8FE62AAE003000EAB522 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FE42AAE003000EAB522 /* LoginViewController.xib */; };
+		3DAF8FEC2AAE022A00EAB522 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FEB2AAE022A00EAB522 /* LoginPresenter.swift */; };
+		3DAF8FF12AAE0A5000EAB522 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF02AAE0A5000EAB522 /* LoginRouter.swift */; };
+		3DAF8FF32AAE0A6300EAB522 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF22AAE0A6300EAB522 /* LoginProtocols.swift */; };
+		3DAF8FF72AAE55B000EAB522 /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF62AAE55B000EAB522 /* PostListRouter.swift */; };
+		3DAF8FFA2AAE55FB00EAB522 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */; };
+		3DAF8FFB2AAE55FB00EAB522 /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +45,6 @@
 		3DAF8FB02AADFF9000EAB522 /* DBPostListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBPostListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAF8FB32AADFF9000EAB522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DAF8FB52AADFF9000EAB522 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3DAF8FB72AADFF9000EAB522 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3DAF8FBA2AADFF9000EAB522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DAF8FBC2AADFF9200EAB522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DAF8FBF2AADFF9200EAB522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DAF8FC12AADFF9200EAB522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		3DAF8FD02AADFF9200EAB522 /* DBPostListAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBPostListAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAF8FD42AADFF9200EAB522 /* DBPostListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPostListAppUITests.swift; sourceTree = "<group>"; };
 		3DAF8FD62AADFF9200EAB522 /* DBPostListAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPostListAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3DAF8FE32AAE003000EAB522 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3DAF8FE42AAE003000EAB522 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		3DAF8FEB2AAE022A00EAB522 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		3DAF8FF02AAE0A5000EAB522 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		3DAF8FF22AAE0A6300EAB522 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		3DAF8FF62AAE55B000EAB522 /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
+		3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +111,11 @@
 		3DAF8FB22AADFF9000EAB522 /* DBPostListApp */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF8FE92AAE01ED00EAB522 /* DataLayer */,
+				3DAF8FE82AAE01E500EAB522 /* DomainLayer */,
+				3DAF8FE72AAE01DD00EAB522 /* View */,
 				3DAF8FB32AADFF9000EAB522 /* AppDelegate.swift */,
 				3DAF8FB52AADFF9000EAB522 /* SceneDelegate.swift */,
-				3DAF8FB72AADFF9000EAB522 /* ViewController.swift */,
-				3DAF8FB92AADFF9000EAB522 /* Main.storyboard */,
 				3DAF8FBC2AADFF9200EAB522 /* Assets.xcassets */,
 				3DAF8FBE2AADFF9200EAB522 /* LaunchScreen.storyboard */,
 				3DAF8FC12AADFF9200EAB522 /* Info.plist */,
@@ -125,6 +138,83 @@
 				3DAF8FD62AADFF9200EAB522 /* DBPostListAppUITestsLaunchTests.swift */,
 			);
 			path = DBPostListAppUITests;
+			sourceTree = "<group>";
+		};
+		3DAF8FE72AAE01DD00EAB522 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FED2AAE024000EAB522 /* Posts */,
+				3DAF8FEA2AAE020400EAB522 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DAF8FE82AAE01E500EAB522 /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		3DAF8FE92AAE01ED00EAB522 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		3DAF8FEA2AAE020400EAB522 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FF42AAE0A7900EAB522 /* protocols */,
+				3DAF8FEF2AAE0A3A00EAB522 /* router */,
+				3DAF8FE32AAE003000EAB522 /* LoginViewController.swift */,
+				3DAF8FE42AAE003000EAB522 /* LoginViewController.xib */,
+				3DAF8FEB2AAE022A00EAB522 /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3DAF8FED2AAE024000EAB522 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FF52AAE558700EAB522 /* router */,
+				3DAF8FEE2AAE024B00EAB522 /* View */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		3DAF8FEE2AAE024B00EAB522 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */,
+				3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DAF8FEF2AAE0A3A00EAB522 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FF02AAE0A5000EAB522 /* LoginRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		3DAF8FF42AAE0A7900EAB522 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FF22AAE0A6300EAB522 /* LoginProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		3DAF8FF52AAE558700EAB522 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FF62AAE55B000EAB522 /* PostListRouter.swift */,
+			);
+			path = router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +321,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAF8FFB2AAE55FB00EAB522 /* PostListViewController.xib in Resources */,
 				3DAF8FC02AADFF9200EAB522 /* LaunchScreen.storyboard in Resources */,
 				3DAF8FBD2AADFF9200EAB522 /* Assets.xcassets in Resources */,
-				3DAF8FBB2AADFF9000EAB522 /* Main.storyboard in Resources */,
+				3DAF8FE62AAE003000EAB522 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DAF8FB82AADFF9000EAB522 /* ViewController.swift in Sources */,
+				3DAF8FFA2AAE55FB00EAB522 /* PostListViewController.swift in Sources */,
+				3DAF8FEC2AAE022A00EAB522 /* LoginPresenter.swift in Sources */,
+				3DAF8FF72AAE55B000EAB522 /* PostListRouter.swift in Sources */,
+				3DAF8FE52AAE003000EAB522 /* LoginViewController.swift in Sources */,
 				3DAF8FB42AADFF9000EAB522 /* AppDelegate.swift in Sources */,
+				3DAF8FF32AAE0A6300EAB522 /* LoginProtocols.swift in Sources */,
+				3DAF8FF12AAE0A5000EAB522 /* LoginRouter.swift in Sources */,
 				3DAF8FB62AADFF9000EAB522 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +393,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3DAF8FB92AADFF9000EAB522 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DAF8FBA2AADFF9000EAB522 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3DAF8FBE2AADFF9200EAB522 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +529,6 @@
 				INFOPLIST_FILE = DBPostListApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +555,6 @@
 				INFOPLIST_FILE = DBPostListApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
