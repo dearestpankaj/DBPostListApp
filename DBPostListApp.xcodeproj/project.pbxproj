@@ -18,7 +18,7 @@
 		3DAF8FE62AAE003000EAB522 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FE42AAE003000EAB522 /* LoginViewController.xib */; };
 		3DAF8FEC2AAE022A00EAB522 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FEB2AAE022A00EAB522 /* LoginPresenter.swift */; };
 		3DAF8FF12AAE0A5000EAB522 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF02AAE0A5000EAB522 /* LoginRouter.swift */; };
-		3DAF8FF32AAE0A6300EAB522 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF22AAE0A6300EAB522 /* LoginProtocols.swift */; };
+		3DAF8FF32AAE0A6300EAB522 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF22AAE0A6300EAB522 /* LoginProtocol.swift */; };
 		3DAF8FF72AAE55B000EAB522 /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF62AAE55B000EAB522 /* PostListRouter.swift */; };
 		3DAF8FFA2AAE55FB00EAB522 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */; };
 		3DAF8FFB2AAE55FB00EAB522 /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */; };
@@ -58,7 +58,7 @@
 		3DAF8FE42AAE003000EAB522 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		3DAF8FEB2AAE022A00EAB522 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		3DAF8FF02AAE0A5000EAB522 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
-		3DAF8FF22AAE0A6300EAB522 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		3DAF8FF22AAE0A6300EAB522 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		3DAF8FF62AAE55B000EAB522 /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
 		3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewController.xib; sourceTree = "<group>"; };
@@ -113,12 +113,9 @@
 		3DAF8FB22AADFF9000EAB522 /* DBPostListApp */ = {
 			isa = PBXGroup;
 			children = (
-				3DAF8FE92AAE01ED00EAB522 /* DataLayer */,
-				3DAF8FE82AAE01E500EAB522 /* DomainLayer */,
-				3DAF8FE72AAE01DD00EAB522 /* View */,
-				3DAF8FB32AADFF9000EAB522 /* AppDelegate.swift */,
-				3DAF8FB52AADFF9000EAB522 /* SceneDelegate.swift */,
-				3DAF8FBC2AADFF9200EAB522 /* Assets.xcassets */,
+				3DAF900A2AAFB05400EAB522 /* Assets */,
+				3DAF90092AAFAF6800EAB522 /* Application */,
+				3DAF8FFF2AAFADD300EAB522 /* Modules */,
 				3DAF8FBE2AADFF9200EAB522 /* LaunchScreen.storyboard */,
 				3DAF8FC12AADFF9200EAB522 /* Info.plist */,
 			);
@@ -142,46 +139,13 @@
 			path = DBPostListAppUITests;
 			sourceTree = "<group>";
 		};
-		3DAF8FE72AAE01DD00EAB522 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3DAF8FED2AAE024000EAB522 /* Posts */,
-				3DAF8FEA2AAE020400EAB522 /* Login */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3DAF8FE82AAE01E500EAB522 /* DomainLayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DomainLayer;
-			sourceTree = "<group>";
-		};
-		3DAF8FE92AAE01ED00EAB522 /* DataLayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataLayer;
-			sourceTree = "<group>";
-		};
-		3DAF8FEA2AAE020400EAB522 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				3DAF8FF42AAE0A7900EAB522 /* protocols */,
-				3DAF8FEF2AAE0A3A00EAB522 /* router */,
-				3DAF8FE32AAE003000EAB522 /* LoginViewController.swift */,
-				3DAF8FE42AAE003000EAB522 /* LoginViewController.xib */,
-				3DAF8FEB2AAE022A00EAB522 /* LoginPresenter.swift */,
-				3DAF8FFC2AAE647200EAB522 /* LoginViewModel.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		3DAF8FED2AAE024000EAB522 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				3DAF8FF52AAE558700EAB522 /* router */,
+				3DAF90072AAFAE9E00EAB522 /* Presenter */,
+				3DAF90062AAFAE8F00EAB522 /* Protocol */,
+				3DAF90042AAFAE4D00EAB522 /* Interactor */,
+				3DAF8FF52AAE558700EAB522 /* Router */,
 				3DAF8FEE2AAE024B00EAB522 /* View */,
 			);
 			path = Posts;
@@ -196,28 +160,112 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		3DAF8FEF2AAE0A3A00EAB522 /* router */ = {
-			isa = PBXGroup;
-			children = (
-				3DAF8FF02AAE0A5000EAB522 /* LoginRouter.swift */,
-			);
-			path = router;
-			sourceTree = "<group>";
-		};
-		3DAF8FF42AAE0A7900EAB522 /* protocols */ = {
-			isa = PBXGroup;
-			children = (
-				3DAF8FF22AAE0A6300EAB522 /* LoginProtocols.swift */,
-			);
-			path = protocols;
-			sourceTree = "<group>";
-		};
-		3DAF8FF52AAE558700EAB522 /* router */ = {
+		3DAF8FF52AAE558700EAB522 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				3DAF8FF62AAE55B000EAB522 /* PostListRouter.swift */,
 			);
-			path = router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3DAF8FFF2AAFADD300EAB522 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FED2AAE024000EAB522 /* Posts */,
+				3DAF90002AAFAE1200EAB522 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3DAF90002AAFAE1200EAB522 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF90082AAFAEE600EAB522 /* ViewModel */,
+				3DAF90052AAFAE5F00EAB522 /* Protocol */,
+				3DAF90032AAFAE4600EAB522 /* Router */,
+				3DAF90022AAFAE3C00EAB522 /* Presenter */,
+				3DAF90012AAFAE3100EAB522 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3DAF90012AAFAE3100EAB522 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FE32AAE003000EAB522 /* LoginViewController.swift */,
+				3DAF8FE42AAE003000EAB522 /* LoginViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DAF90022AAFAE3C00EAB522 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FEB2AAE022A00EAB522 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3DAF90032AAFAE4600EAB522 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FF02AAE0A5000EAB522 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3DAF90042AAFAE4D00EAB522 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3DAF90052AAFAE5F00EAB522 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FF22AAE0A6300EAB522 /* LoginProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3DAF90062AAFAE8F00EAB522 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3DAF90072AAFAE9E00EAB522 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3DAF90082AAFAEE600EAB522 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FFC2AAE647200EAB522 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DAF90092AAFAF6800EAB522 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FB32AADFF9000EAB522 /* AppDelegate.swift */,
+				3DAF8FB52AADFF9000EAB522 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3DAF900A2AAFB05400EAB522 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF8FBC2AADFF9200EAB522 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,7 +405,7 @@
 				3DAF8FF72AAE55B000EAB522 /* PostListRouter.swift in Sources */,
 				3DAF8FE52AAE003000EAB522 /* LoginViewController.swift in Sources */,
 				3DAF8FB42AADFF9000EAB522 /* AppDelegate.swift in Sources */,
-				3DAF8FF32AAE0A6300EAB522 /* LoginProtocols.swift in Sources */,
+				3DAF8FF32AAE0A6300EAB522 /* LoginProtocol.swift in Sources */,
 				3DAF8FF12AAE0A5000EAB522 /* LoginRouter.swift in Sources */,
 				3DAF8FB62AADFF9000EAB522 /* SceneDelegate.swift in Sources */,
 				3DAF8FFD2AAE647200EAB522 /* LoginViewModel.swift in Sources */,
