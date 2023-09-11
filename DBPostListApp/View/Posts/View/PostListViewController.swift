@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PostListViewController.swift
 //  DBPostListApp
 //
 //  Created by Pankaj Sachdeva on 10/09/23.
@@ -7,13 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PostListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
