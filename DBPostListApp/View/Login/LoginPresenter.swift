@@ -9,20 +9,25 @@ import UIKit
 
 class LoginPresenter: LoginViewToPresenterProtocol {
     var router: PresenterToRouterProtocol?
+    var viewModel: LoginViewModel
     
-    init(router: PresenterToRouterProtocol? = nil) {
+    init(
+        router: PresenterToRouterProtocol? = nil,
+        viewModel: LoginViewModel
+    ) {
         self.router = router
+        self.viewModel = viewModel
     }
     
     func validateUserID(userID: String?, navigationController: UINavigationController?) {
         guard let userID = userID, !userID.isEmpty else {
-            showError()
+            showError(message: "Invalid user ID")
             return
         }
         router?.pushToPostListScreen(userID: userID, navigationConroller: navigationController)
     }
     
-    func showError() {
-        
+    func showError(message: String) {
+        viewModel.errorMessage = message
     }
 }

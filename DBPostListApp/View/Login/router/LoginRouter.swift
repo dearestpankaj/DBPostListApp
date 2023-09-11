@@ -10,8 +10,9 @@ import UIKit
 class LoginRouter: PresenterToRouterProtocol {
     
     func createModule() -> LoginViewController {
-        let presenter = LoginPresenter(router: LoginRouter())
-        return LoginViewController(presenter: presenter)
+        let loginViewModel = LoginViewModel()
+        let presenter = LoginPresenter(router: LoginRouter(), viewModel: loginViewModel)
+        return LoginViewController(presenter: presenter, viewModel: loginViewModel)
     }
     
     func pushToPostListScreen(userID: String, navigationConroller navigationController: UINavigationController?) {

@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import Combine
 
 class LoginViewController: UIViewController {
     
-    var presenter: LoginViewToPresenterProtocol?
-    @IBOutlet var userIDTextField: UITextField?
+    private let presenter: LoginViewToPresenterProtocol
+    private let viewModel: LoginViewModel
     
-    init(presenter: LoginViewToPresenterProtocol?) {
+    @IBOutlet var userIDTextField: UITextField?
+    @IBOutlet var errorMessageLabel: UILabel?
+    @IBOutlet var loginButton: UIButton?
+    
+    private var cancellable: AnyCancellable?
+    
+    init(
+        presenter: LoginViewToPresenterProtocol,
+        viewModel: LoginViewModel
+    ) {
         self.presenter = presenter
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -23,9 +34,17 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initializeBindings()
     }
     
-    @IBAction func loginTapped(_ sender: UIButton) {
-        presenter?.validateUserID(userID: userIDTextField?.text, navigationController: self.navigationController)
+    @IBAction private func loginTapped(_ sender: UIButton) {
+        presenter.validateUserID(userID: userIDTextField?.text, navigationController: self.navigationController)
+    }
+    
+    private func initializeBindings() {
+        cancellable = viewModel.$errorMessage.sink(receiveValue: { [weak self] errorMessage in
+            self?.errorMessageLabel?.text = errorMessage
+        })
     }
 }

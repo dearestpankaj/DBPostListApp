@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DBPostListApp" customModuleProvider="target">
             <connections>
+                <outlet property="errorMessageLabel" destination="xF0-Kd-e0m" id="x3U-L5-87S"/>
+                <outlet property="loginButton" destination="VNz-Rm-tDw" id="tET-hr-ef2"/>
                 <outlet property="userIDTextField" destination="8Mg-s5-Z6W" id="Dmb-CF-cq9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,10 +40,22 @@
                         <action selector="loginTapped:" destination="-1" eventType="touchUpInside" id="Qts-xo-tDV"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF0-Kd-e0m">
+                    <rect key="frame" x="16" y="284" width="361" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="n9a-dH-Dlf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="xF0-Kd-e0m" firstAttribute="leading" secondItem="8Mg-s5-Z6W" secondAttribute="leading" id="6Qy-jg-kVR"/>
+                <constraint firstItem="xF0-Kd-e0m" firstAttribute="trailing" secondItem="8Mg-s5-Z6W" secondAttribute="trailing" id="AsI-3Z-iKH"/>
+                <constraint firstItem="xF0-Kd-e0m" firstAttribute="top" secondItem="8Mg-s5-Z6W" secondAttribute="bottom" constant="8" symbolic="YES" id="EzX-cJ-Y7j"/>
                 <constraint firstItem="VNz-Rm-tDw" firstAttribute="leading" secondItem="8Mg-s5-Z6W" secondAttribute="leading" id="HGe-iU-v8X"/>
                 <constraint firstItem="VNz-Rm-tDw" firstAttribute="trailing" secondItem="8Mg-s5-Z6W" secondAttribute="trailing" id="HWB-lU-hYW"/>
                 <constraint firstItem="8Mg-s5-Z6W" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="183" id="P0u-sK-Ifk"/>
@@ -55,6 +69,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

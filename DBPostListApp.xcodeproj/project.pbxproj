@@ -22,6 +22,7 @@
 		3DAF8FF72AAE55B000EAB522 /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF62AAE55B000EAB522 /* PostListRouter.swift */; };
 		3DAF8FFA2AAE55FB00EAB522 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */; };
 		3DAF8FFB2AAE55FB00EAB522 /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */; };
+		3DAF8FFD2AAE647200EAB522 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FFC2AAE647200EAB522 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3DAF8FF62AAE55B000EAB522 /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
 		3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewController.xib; sourceTree = "<group>"; };
+		3DAF8FFC2AAE647200EAB522 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				3DAF8FE32AAE003000EAB522 /* LoginViewController.swift */,
 				3DAF8FE42AAE003000EAB522 /* LoginViewController.xib */,
 				3DAF8FEB2AAE022A00EAB522 /* LoginPresenter.swift */,
+				3DAF8FFC2AAE647200EAB522 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				3DAF8FF32AAE0A6300EAB522 /* LoginProtocols.swift in Sources */,
 				3DAF8FF12AAE0A5000EAB522 /* LoginRouter.swift in Sources */,
 				3DAF8FB62AADFF9000EAB522 /* SceneDelegate.swift in Sources */,
+				3DAF8FFD2AAE647200EAB522 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
