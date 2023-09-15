@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginRouter: PresenterToRouterProtocol {
+class LoginRouter: LoginPresenterToRouterProtocol {
     
     func createModule() -> LoginViewController {
         let loginViewModel = LoginViewModel()
@@ -15,9 +15,9 @@ class LoginRouter: PresenterToRouterProtocol {
         return LoginViewController(presenter: presenter, viewModel: loginViewModel)
     }
     
-    func pushToPostListScreen(userID: String, navigationConroller navigationController: UINavigationController?) {
+    func pushToPostListScreen(userID: Int, navigationConroller navigationController: UINavigationController?) {
         let router = PostListRouter()
-        let postListModule = router.createPostsListModule()
+        let postListModule = router.createPostsListModule(userID)
         navigationController?.pushViewController(postListModule, animated: true)
     }
 }
