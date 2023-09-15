@@ -23,6 +23,20 @@
 		3DAF8FFA2AAE55FB00EAB522 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */; };
 		3DAF8FFB2AAE55FB00EAB522 /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */; };
 		3DAF8FFD2AAE647200EAB522 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FFC2AAE647200EAB522 /* LoginViewModel.swift */; };
+		3DAF900C2AAFB35400EAB522 /* PostListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF900B2AAFB35400EAB522 /* PostListPresenter.swift */; };
+		3DAF900F2AAFB38200EAB522 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF900E2AAFB38200EAB522 /* PostListViewModel.swift */; };
+		3DAF90112AAFB3A900EAB522 /* PostListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90102AAFB3A900EAB522 /* PostListProtocol.swift */; };
+		3DAF90132AAFB65400EAB522 /* PostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90122AAFB65400EAB522 /* PostListInteractor.swift */; };
+		3DAF90162AB02E4300EAB522 /* PostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90152AB02E4300EAB522 /* PostDTO.swift */; };
+		3DAF90192AB0360D00EAB522 /* PostListRemoteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90182AB0360D00EAB522 /* PostListRemoteProvider.swift */; };
+		3DAF901C2AB1086900EAB522 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAF901B2AB1086900EAB522 /* Alamofire */; };
+		3DAF901F2AB259F100EAB522 /* PostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF901D2AB259F100EAB522 /* PostListTableViewCell.swift */; };
+		3DAF90202AB259F100EAB522 /* PostListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF901E2AB259F100EAB522 /* PostListTableViewCell.xib */; };
+		3DAF90222AB262C500EAB522 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90212AB262C500EAB522 /* Post.swift */; };
+		3DAF90252AB26BC300EAB522 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAF90242AB26BC300EAB522 /* Realm */; };
+		3DAF90272AB26BC300EAB522 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAF90262AB26BC300EAB522 /* RealmSwift */; };
+		3DAF90292AB2F96700EAB522 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90282AB2F96700EAB522 /* PostModel.swift */; };
+		3DAF902B2AB2FA8A00EAB522 /* PostListLocalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF902A2AB2FA8A00EAB522 /* PostListLocalProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +77,17 @@
 		3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewController.xib; sourceTree = "<group>"; };
 		3DAF8FFC2AAE647200EAB522 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3DAF900B2AAFB35400EAB522 /* PostListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenter.swift; sourceTree = "<group>"; };
+		3DAF900E2AAFB38200EAB522 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
+		3DAF90102AAFB3A900EAB522 /* PostListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListProtocol.swift; sourceTree = "<group>"; };
+		3DAF90122AAFB65400EAB522 /* PostListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractor.swift; sourceTree = "<group>"; };
+		3DAF90152AB02E4300EAB522 /* PostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDTO.swift; sourceTree = "<group>"; };
+		3DAF90182AB0360D00EAB522 /* PostListRemoteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRemoteProvider.swift; sourceTree = "<group>"; };
+		3DAF901D2AB259F100EAB522 /* PostListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewCell.swift; sourceTree = "<group>"; };
+		3DAF901E2AB259F100EAB522 /* PostListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListTableViewCell.xib; sourceTree = "<group>"; };
+		3DAF90212AB262C500EAB522 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3DAF90282AB2F96700EAB522 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		3DAF902A2AB2FA8A00EAB522 /* PostListLocalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListLocalProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAF90272AB26BC300EAB522 /* RealmSwift in Frameworks */,
+				3DAF90252AB26BC300EAB522 /* Realm in Frameworks */,
+				3DAF901C2AB1086900EAB522 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,11 +141,11 @@
 		3DAF8FB22AADFF9000EAB522 /* DBPostListApp */ = {
 			isa = PBXGroup;
 			children = (
-				3DAF900A2AAFB05400EAB522 /* Assets */,
 				3DAF90092AAFAF6800EAB522 /* Application */,
+				3DAF900A2AAFB05400EAB522 /* Assets */,
 				3DAF8FFF2AAFADD300EAB522 /* Modules */,
-				3DAF8FBE2AADFF9200EAB522 /* LaunchScreen.storyboard */,
 				3DAF8FC12AADFF9200EAB522 /* Info.plist */,
+				3DAF8FBE2AADFF9200EAB522 /* LaunchScreen.storyboard */,
 			);
 			path = DBPostListApp;
 			sourceTree = "<group>";
@@ -139,16 +167,19 @@
 			path = DBPostListAppUITests;
 			sourceTree = "<group>";
 		};
-		3DAF8FED2AAE024000EAB522 /* Posts */ = {
+		3DAF8FED2AAE024000EAB522 /* PostList */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF90172AB035EC00EAB522 /* Provider */,
+				3DAF90142AB02E2500EAB522 /* Entity */,
+				3DAF900D2AAFB36500EAB522 /* ViewModel */,
 				3DAF90072AAFAE9E00EAB522 /* Presenter */,
 				3DAF90062AAFAE8F00EAB522 /* Protocol */,
 				3DAF90042AAFAE4D00EAB522 /* Interactor */,
 				3DAF8FF52AAE558700EAB522 /* Router */,
 				3DAF8FEE2AAE024B00EAB522 /* View */,
 			);
-			path = Posts;
+			path = PostList;
 			sourceTree = "<group>";
 		};
 		3DAF8FEE2AAE024B00EAB522 /* View */ = {
@@ -156,6 +187,8 @@
 			children = (
 				3DAF8FF82AAE55FB00EAB522 /* PostListViewController.swift */,
 				3DAF8FF92AAE55FB00EAB522 /* PostListViewController.xib */,
+				3DAF901D2AB259F100EAB522 /* PostListTableViewCell.swift */,
+				3DAF901E2AB259F100EAB522 /* PostListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,7 +204,7 @@
 		3DAF8FFF2AAFADD300EAB522 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				3DAF8FED2AAE024000EAB522 /* Posts */,
+				3DAF8FED2AAE024000EAB522 /* PostList */,
 				3DAF90002AAFAE1200EAB522 /* Login */,
 			);
 			path = Modules;
@@ -217,6 +250,7 @@
 		3DAF90042AAFAE4D00EAB522 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF90122AAFB65400EAB522 /* PostListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -232,6 +266,7 @@
 		3DAF90062AAFAE8F00EAB522 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF90102AAFB3A900EAB522 /* PostListProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -239,6 +274,7 @@
 		3DAF90072AAFAE9E00EAB522 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF900B2AAFB35400EAB522 /* PostListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -268,6 +304,33 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		3DAF900D2AAFB36500EAB522 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF900E2AAFB38200EAB522 /* PostListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DAF90142AB02E2500EAB522 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF90152AB02E4300EAB522 /* PostDTO.swift */,
+				3DAF90212AB262C500EAB522 /* Post.swift */,
+				3DAF90282AB2F96700EAB522 /* PostModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3DAF90172AB035EC00EAB522 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF90182AB0360D00EAB522 /* PostListRemoteProvider.swift */,
+				3DAF902A2AB2FA8A00EAB522 /* PostListLocalProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +347,11 @@
 			dependencies = (
 			);
 			name = DBPostListApp;
+			packageProductDependencies = (
+				3DAF901B2AB1086900EAB522 /* Alamofire */,
+				3DAF90242AB26BC300EAB522 /* Realm */,
+				3DAF90262AB26BC300EAB522 /* RealmSwift */,
+			);
 			productName = DBPostListApp;
 			productReference = 3DAF8FB02AADFF9000EAB522 /* DBPostListApp.app */;
 			productType = "com.apple.product-type.application";
@@ -356,6 +424,10 @@
 				Base,
 			);
 			mainGroup = 3DAF8FA72AADFF9000EAB522;
+			packageReferences = (
+				3DAF901A2AB1086900EAB522 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3DAF90232AB26BC300EAB522 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 3DAF8FB12AADFF9000EAB522 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -375,6 +447,7 @@
 				3DAF8FFB2AAE55FB00EAB522 /* PostListViewController.xib in Resources */,
 				3DAF8FC02AADFF9200EAB522 /* LaunchScreen.storyboard in Resources */,
 				3DAF8FBD2AADFF9200EAB522 /* Assets.xcassets in Resources */,
+				3DAF90202AB259F100EAB522 /* PostListTableViewCell.xib in Resources */,
 				3DAF8FE62AAE003000EAB522 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,14 +474,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DAF8FFA2AAE55FB00EAB522 /* PostListViewController.swift in Sources */,
+				3DAF90292AB2F96700EAB522 /* PostModel.swift in Sources */,
 				3DAF8FEC2AAE022A00EAB522 /* LoginPresenter.swift in Sources */,
 				3DAF8FF72AAE55B000EAB522 /* PostListRouter.swift in Sources */,
+				3DAF902B2AB2FA8A00EAB522 /* PostListLocalProvider.swift in Sources */,
 				3DAF8FE52AAE003000EAB522 /* LoginViewController.swift in Sources */,
+				3DAF90222AB262C500EAB522 /* Post.swift in Sources */,
+				3DAF90132AAFB65400EAB522 /* PostListInteractor.swift in Sources */,
+				3DAF90192AB0360D00EAB522 /* PostListRemoteProvider.swift in Sources */,
+				3DAF90162AB02E4300EAB522 /* PostDTO.swift in Sources */,
 				3DAF8FB42AADFF9000EAB522 /* AppDelegate.swift in Sources */,
+				3DAF90112AAFB3A900EAB522 /* PostListProtocol.swift in Sources */,
 				3DAF8FF32AAE0A6300EAB522 /* LoginProtocol.swift in Sources */,
+				3DAF900C2AAFB35400EAB522 /* PostListPresenter.swift in Sources */,
+				3DAF901F2AB259F100EAB522 /* PostListTableViewCell.swift in Sources */,
 				3DAF8FF12AAE0A5000EAB522 /* LoginRouter.swift in Sources */,
 				3DAF8FB62AADFF9000EAB522 /* SceneDelegate.swift in Sources */,
 				3DAF8FFD2AAE647200EAB522 /* LoginViewModel.swift in Sources */,
+				3DAF900F2AAFB38200EAB522 /* PostListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +817,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DAF901A2AB1086900EAB522 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3DAF90232AB26BC300EAB522 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DAF901B2AB1086900EAB522 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DAF901A2AB1086900EAB522 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3DAF90242AB26BC300EAB522 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DAF90232AB26BC300EAB522 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		3DAF90262AB26BC300EAB522 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DAF90232AB26BC300EAB522 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DAF8FA82AADFF9000EAB522 /* Project object */;
 }

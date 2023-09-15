@@ -11,7 +11,7 @@ protocol LoginViewToPresenterProtocol {
     func validateUserID(userID: String?, navigationController: UINavigationController?)
 }
 
-protocol PresenterToRouterProtocol {
+protocol LoginPresenterToRouterProtocol {
     func createModule() -> LoginViewController
-    func pushToPostListScreen(userID: String, navigationConroller navigationController: UINavigationController?)
+    func pushToPostListScreen(userID: Int, navigationConroller navigationController: UINavigationController?)
 }

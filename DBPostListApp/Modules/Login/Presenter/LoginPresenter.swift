@@ -8,11 +8,11 @@
 import UIKit
 
 class LoginPresenter: LoginViewToPresenterProtocol {
-    var router: PresenterToRouterProtocol?
+    var router: LoginPresenterToRouterProtocol?
     var viewModel: LoginViewModel
     
     init(
-        router: PresenterToRouterProtocol? = nil,
+        router: LoginPresenterToRouterProtocol? = nil,
         viewModel: LoginViewModel
     ) {
         self.router = router
@@ -20,7 +20,7 @@ class LoginPresenter: LoginViewToPresenterProtocol {
     }
     
     func validateUserID(userID: String?, navigationController: UINavigationController?) {
-        guard let userID = userID, !userID.isEmpty else {
+        guard let userID = Int(userID ?? ""), userID > 0 else {
             showError(message: "Invalid user ID")
             return
         }
