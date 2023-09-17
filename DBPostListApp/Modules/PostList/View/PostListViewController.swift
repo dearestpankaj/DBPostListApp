@@ -43,7 +43,7 @@ class PostListViewController: UIViewController {
     }
     
     @IBAction func onChangePostViewType(segment: UISegmentedControl) {
-        presenter.postView(setType: segment.selectedSegmentIndex)
+        presenter.setPostView(postType: segment.selectedSegmentIndex)
     }
 }
 
@@ -73,8 +73,14 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         cell.set(viewModel: viewModel.posts[indexPath.row])
+        cell.delegate = self
         return cell
     }
-    
-    
+}
+
+extension PostListViewController: PostListTableViewCellDelegate {
+    func favoriteButtonAction(viewModel: Post) {
+        presenter.setFavoritePost(post: viewModel)
+        postsTableView?.reloadData()
+    }
 }

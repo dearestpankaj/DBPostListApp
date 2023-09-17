@@ -25,7 +25,7 @@ class PostListInteractor: PostListPresenterToInteractorProtocol {
             let posts = postDtoArray.map {
                 Post(id: $0.id, title: $0.title, detail: $0.body, isFavorite: false)
             }
-            self?.postListLocalProvider.savePosts(userId: userID, posts: posts)
+            self?.postListLocalProvider.savePosts(userID: userID, posts: posts)
             return self?.postListLocalProvider.getUserPosts(userID: userID).map {
                 Post(id: $0.postID, title: $0.title, detail: $0.body, isFavorite: $0.isFavorite)
             }
@@ -35,6 +35,17 @@ class PostListInteractor: PostListPresenterToInteractorProtocol {
     func getfavoritePosts(userID: Int) -> [Post] {
         postListLocalProvider.getFavoritePosts(userID: userID).map {
             Post(id: $0.postID , title: $0.title, detail: $0.body, isFavorite: $0.isFavorite)
+        }
+    }
+    
+    func setFavoritePost(_ post: Post) {
+        postListLocalProvider.setFavoritePostStatus(postID: post.id, status: post.isFavorite)
+        let array = postListLocalProvider.getFavoritePosts(userID: 1)
+    }
+    
+    func getPostsFromLocalDatasource(_ userID: Int) -> [Post] {
+        postListLocalProvider.getUserPosts(userID: userID).map {
+            Post(id: $0.postID, title: $0.title, detail: $0.body, isFavorite: $0.isFavorite)
         }
     }
 }

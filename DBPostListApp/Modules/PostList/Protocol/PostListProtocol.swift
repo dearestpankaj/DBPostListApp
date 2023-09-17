@@ -15,7 +15,8 @@ protocol PostListPresenterToViewProtocol: AnyObject {
 
 protocol PostListViewToPresenterProtocol {
     func getUserPosts(userID: Int)
-    func postView(setType index: Int)
+    func setPostView(postType index: Int)
+    func setFavoritePost(post: Post)
 }
 
 protocol PostListPresenterToRouterProtocol {
@@ -26,6 +27,8 @@ protocol PostListPresenterToRouterProtocol {
 protocol PostListPresenterToInteractorProtocol {
     func getUserPosts(userID: Int) -> AnyPublisher<[Post]?, NetworkErrors>
     func getfavoritePosts(userID: Int) -> [Post]
+    func setFavoritePost(_ post: Post)
+    func getPostsFromLocalDatasource(_ userID: Int) -> [Post]
 }
 
 protocol PostListInteractorToRemoteProviderProtocol {
@@ -35,6 +38,6 @@ protocol PostListInteractorToRemoteProviderProtocol {
 protocol PostListInteractorToLocalProviderProtocol {
     func getUserPosts(userID: Int) -> [PostModel]
     func getFavoritePosts(userID: Int) -> [PostModel]
-    func savePosts(userId: Int, posts: [Post])
+    func savePosts(userID: Int, posts: [Post])
     func setFavoritePostStatus(postID: Int, status: Bool)
 }

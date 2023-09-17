@@ -46,21 +46,27 @@ class PostListPresenter: PostListViewToPresenterProtocol {
         }
     }
     
-    func postView(setType index: Int) {
+    func setPostView(postType index: Int) {
         guard let postViewType = PostViewType(rawValue: index) else {
             return
         }
         viewModel.selectedViewType = postViewType
+        switch viewModel.selectedViewType {
+        case .all:
+            viewModel.posts = interactor.getPostsFromLocalDatasource(viewModel.userID)
+        case .favorite:
+            viewModel.posts = interactor.getfavoritePosts(userID: viewModel.userID)
+        }
         view?.onPostListResponseSuccess()
     }
     
-    func getPosts() -> [Post] {
-        switch viewModel.selectedViewType {
-        case .all:
-            return viewModel.posts
-        case .favorite:
-            return interactor.getfavoritePosts(userID: viewModel.userID)
+    func setFavoritePost(post: Post) {
+        interactor.setFavoritePost(post)
+        if case .favorite = viewModel.selectedViewType {
+            viewModel.posts = interactor.getfavoritePosts(userID: viewModel.userID)
+        } else {
+            viewModel.posts = interactor.getPostsFromLocalDatasource(viewModel.userID)
         }
+        view?.onPostListResponseSuccess()
     }
-    
 }
