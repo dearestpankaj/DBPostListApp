@@ -11,19 +11,14 @@ import Alamofire
 
 class PostListRemoteProvider: PostListInteractorToRemoteProviderProtocol {
     
-    func getUserPosts(userID: String) -> AnyPublisher<[PostDTO], NetworkErrors> {
-        let url = URL(string: "https://jsonplaceholder.typicode.com/posts?userId=\(userID)")
+    let postsURL: String = "https://jsonplaceholder.typicode.com/posts?userId="
+    
+    func getUserPosts(userID: String) -> AnyPublisher<[PostDTO], NetworkError> {
+        let url = URL(string: "\(postsURL)\(userID)")
                 return AF.request(url!,method: .get)
                              .publishDecodable(type: [PostDTO].self)
                              .value()
-                             .mapError { _ in NetworkErrors.decoderError }
+                             .mapError { _ in NetworkError.decodeFailed }
                              .eraseToAnyPublisher()
     }
-}
-
-enum NetworkErrors: Error{
-    case urlError
-    case responseError
-    case decoderError
-    case unknownError
 }

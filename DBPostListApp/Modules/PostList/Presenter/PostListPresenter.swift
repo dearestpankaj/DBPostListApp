@@ -10,7 +10,6 @@ import Combine
 
 
 class PostListPresenter: PostListViewToPresenterProtocol {
-    weak var view: PostListPresenterToViewProtocol?
     
     private let viewModel: PostListViewModel
     private let interactor: PostListPresenterToInteractorProtocol
@@ -18,49 +17,54 @@ class PostListPresenter: PostListViewToPresenterProtocol {
     private var cancellable: AnyCancellable?
     
     init(
-        view: PostListPresenterToViewProtocol? = nil,
         viewModel: PostListViewModel,
         interactor: PostListPresenterToInteractorProtocol
     ) {
-        self.view = view
         self.viewModel = viewModel
         self.interactor = interactor
     }
     
     func getUserPosts(userID: Int) {
         viewModel.userID = userID
+        viewModel.isLoading = true
+        
         cancellable = interactor.getUserPosts(userID: viewModel.userID).sink { [weak self] result in
+            self?.viewModel.isLoading = false
             switch result {
-            case .finished:
-                print("success")
             case .failure(let error):
-                self?.view?.onPostListResponseFailed(error: error.localizedDescription)
+                self?.viewModel.errorMessage = error.description
+            default:
+                break
             }
         } receiveValue: { [weak self] posts in
             guard let posts = posts else {
-                self?.view?.onPostListResponseFailed(error: "")
+                self?.viewModel.errorMessage = "Posts not found for the user"
                 return
             }
             self?.viewModel.posts = posts
-            self?.view?.onPostListResponseSuccess()
         }
     }
     
-    func postView(setType index: Int) {
+    func setPostView(postType index: Int) {
         guard let postViewType = PostViewType(rawValue: index) else {
             return
         }
         viewModel.selectedViewType = postViewType
-        view?.onPostListResponseSuccess()
-    }
-    
-    func getPosts() -> [Post] {
+        
         switch viewModel.selectedViewType {
         case .all:
-            return viewModel.posts
+            viewModel.posts = interactor.getPostsFromLocalDatasource(viewModel.userID)
         case .favorite:
-            return interactor.getfavoritePosts(userID: viewModel.userID)
+            viewModel.posts = interactor.getfavoritePosts(userID: viewModel.userID)
         }
     }
     
+    func setFavoritePost(post: Post) {
+        interactor.setFavoritePost(post)
+        if case .favorite = viewModel.selectedViewType {
+            viewModel.posts = interactor.getfavoritePosts(userID: viewModel.userID)
+        } else {
+            viewModel.posts = interactor.getPostsFromLocalDatasource(viewModel.userID)
+        }
+    }
 }

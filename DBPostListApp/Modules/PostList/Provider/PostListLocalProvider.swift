@@ -26,15 +26,15 @@ class PostListLocalProvider: PostListInteractorToLocalProviderProtocol {
         return Array(aa)
     }
     
-    func savePosts(userId: Int, posts: [Post]) {
+    func savePosts(posts: [PostModel]) {
         let realm = try! Realm()
         
-        let postsModels = posts.map {
-            PostModel(userID: userId, postID: $0.id, title: $0.title, body: $0.detail)
-        }
-        for post in postsModels {
-            try! realm.write {
-                realm.create(PostModel.self, value: post, update: .modified)
+        for post in posts {
+            let existingPosts = realm.objects(PostModel.self).where { $0.postID == post.postID }
+            if existingPosts.count < 1 {
+                try! realm.write {
+                    realm.create(PostModel.self, value: post, update: .modified)
+                }
             }
         }
     }

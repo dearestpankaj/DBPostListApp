@@ -37,6 +37,7 @@
 		3DAF90272AB26BC300EAB522 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAF90262AB26BC300EAB522 /* RealmSwift */; };
 		3DAF90292AB2F96700EAB522 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90282AB2F96700EAB522 /* PostModel.swift */; };
 		3DAF902B2AB2FA8A00EAB522 /* PostListLocalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF902A2AB2FA8A00EAB522 /* PostListLocalProvider.swift */; };
+		3DAF90332AB760D200EAB522 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90322AB760D200EAB522 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		3DAF90212AB262C500EAB522 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3DAF90282AB2F96700EAB522 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		3DAF902A2AB2FA8A00EAB522 /* PostListLocalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListLocalProvider.swift; sourceTree = "<group>"; };
+		3DAF90322AB760D200EAB522 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		3DAF8FB22AADFF9000EAB522 /* DBPostListApp */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF90312AB7608800EAB522 /* Common */,
 				3DAF90092AAFAF6800EAB522 /* Application */,
 				3DAF900A2AAFB05400EAB522 /* Assets */,
 				3DAF8FFF2AAFADD300EAB522 /* Modules */,
@@ -331,6 +334,14 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		3DAF90312AB7608800EAB522 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF90322AB760D200EAB522 /* NetworkError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -482,6 +493,7 @@
 				3DAF90222AB262C500EAB522 /* Post.swift in Sources */,
 				3DAF90132AAFB65400EAB522 /* PostListInteractor.swift in Sources */,
 				3DAF90192AB0360D00EAB522 /* PostListRemoteProvider.swift in Sources */,
+				3DAF90332AB760D200EAB522 /* NetworkError.swift in Sources */,
 				3DAF90162AB02E4300EAB522 /* PostDTO.swift in Sources */,
 				3DAF8FB42AADFF9000EAB522 /* AppDelegate.swift in Sources */,
 				3DAF90112AAFB3A900EAB522 /* PostListProtocol.swift in Sources */,

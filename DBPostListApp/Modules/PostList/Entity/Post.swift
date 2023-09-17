@@ -11,5 +11,5 @@ struct Post {
     let id: Int
     let title: String
     let detail: String
-    let isFavorite: Bool
+    var isFavorite: Bool
 }

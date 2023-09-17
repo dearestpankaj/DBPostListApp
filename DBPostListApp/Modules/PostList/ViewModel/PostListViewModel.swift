@@ -16,6 +16,8 @@ class PostListViewModel: ObservableObject {
     var userID = 0
     let pageTitle = "My Posts"
     var selectedViewType: PostViewType = .all
-    var posts = [Post]()
-    var favoritePosts = [Post]()
+    
+    @Published var isLoading = false
+    @Published var posts = [Post]()
+    @Published var errorMessage: String?
 }
