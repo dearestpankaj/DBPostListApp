@@ -55,14 +55,14 @@ class PostListPresenter: PostListViewToPresenterProtocol {
         case .all:
             viewModel.posts = interactor.getPostsFromLocalDatasource(viewModel.userID)
         case .favorite:
-            viewModel.posts = interactor.getfavoritePosts(userID: viewModel.userID)
+            viewModel.posts = interactor.getFavoritePosts(userID: viewModel.userID)
         }
     }
     
     func setFavoritePost(post: Post) {
         interactor.setFavoritePost(post)
         if case .favorite = viewModel.selectedViewType {
-            viewModel.posts = interactor.getfavoritePosts(userID: viewModel.userID)
+            viewModel.posts = interactor.getFavoritePosts(userID: viewModel.userID)
         } else {
             viewModel.posts = interactor.getPostsFromLocalDatasource(viewModel.userID)
         }

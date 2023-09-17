@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D9361842AB7B36B005D89D3 /* PostListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9361832AB7B36B005D89D3 /* PostListInteractorTests.swift */; };
+		3D9361862AB7B4B6005D89D3 /* MockPostListRemoteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9361852AB7B4B6005D89D3 /* MockPostListRemoteProvider.swift */; };
+		3D9361882AB7B4EE005D89D3 /* MockPostListLocalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9361872AB7B4EE005D89D3 /* MockPostListLocalProvider.swift */; };
 		3DAF8FB42AADFF9000EAB522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FB32AADFF9000EAB522 /* AppDelegate.swift */; };
 		3DAF8FB62AADFF9000EAB522 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF8FB52AADFF9000EAB522 /* SceneDelegate.swift */; };
 		3DAF8FBD2AADFF9200EAB522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAF8FBC2AADFF9200EAB522 /* Assets.xcassets */; };
@@ -38,6 +41,10 @@
 		3DAF90292AB2F96700EAB522 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90282AB2F96700EAB522 /* PostModel.swift */; };
 		3DAF902B2AB2FA8A00EAB522 /* PostListLocalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF902A2AB2FA8A00EAB522 /* PostListLocalProvider.swift */; };
 		3DAF90332AB760D200EAB522 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90322AB760D200EAB522 /* NetworkError.swift */; };
+		3DAF90492AB79ACF00EAB522 /* PostListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF90482AB79ACF00EAB522 /* PostListPresenterTests.swift */; };
+		3DAF904D2AB79B5800EAB522 /* MockPostListPresenterToInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF904C2AB79B5800EAB522 /* MockPostListPresenterToInteractor.swift */; };
+		3DAF90502AB79CFC00EAB522 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAF904F2AB79CFC00EAB522 /* Realm */; };
+		3DAF90522AB79CFC00EAB522 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAF90512AB79CFC00EAB522 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D9361832AB7B36B005D89D3 /* PostListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractorTests.swift; sourceTree = "<group>"; };
+		3D9361852AB7B4B6005D89D3 /* MockPostListRemoteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListRemoteProvider.swift; sourceTree = "<group>"; };
+		3D9361872AB7B4EE005D89D3 /* MockPostListLocalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListLocalProvider.swift; sourceTree = "<group>"; };
 		3DAF8FB02AADFF9000EAB522 /* DBPostListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBPostListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAF8FB32AADFF9000EAB522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DAF8FB52AADFF9000EAB522 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +100,8 @@
 		3DAF90282AB2F96700EAB522 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		3DAF902A2AB2FA8A00EAB522 /* PostListLocalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListLocalProvider.swift; sourceTree = "<group>"; };
 		3DAF90322AB760D200EAB522 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3DAF90482AB79ACF00EAB522 /* PostListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenterTests.swift; sourceTree = "<group>"; };
+		3DAF904C2AB79B5800EAB522 /* MockPostListPresenterToInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListPresenterToInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAF90522AB79CFC00EAB522 /* RealmSwift in Frameworks */,
+				3DAF90502AB79CFC00EAB522 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D9361822AB7B34A005D89D3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3D9361832AB7B36B005D89D3 /* PostListInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		3DAF8FA72AADFF9000EAB522 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +149,7 @@
 				3DAF8FC92AADFF9200EAB522 /* DBPostListAppTests */,
 				3DAF8FD32AADFF9200EAB522 /* DBPostListAppUITests */,
 				3DAF8FB12AADFF9000EAB522 /* Products */,
+				3DAF904E2AB79CFC00EAB522 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +179,8 @@
 		3DAF8FC92AADFF9200EAB522 /* DBPostListAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3DAF904A2AB79B3600EAB522 /* Mocks */,
+				3DAF90432AB7983200EAB522 /* Modules */,
 				3DAF8FCA2AADFF9200EAB522 /* DBPostListAppTests.swift */,
 			);
 			path = DBPostListAppTests;
@@ -342,6 +367,56 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		3DAF90432AB7983200EAB522 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF90442AB7984600EAB522 /* PostList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3DAF90442AB7984600EAB522 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				3D9361822AB7B34A005D89D3 /* Interactor */,
+				3DAF90452AB7984E00EAB522 /* Presenter */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		3DAF90452AB7984E00EAB522 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF90482AB79ACF00EAB522 /* PostListPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3DAF904A2AB79B3600EAB522 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF904B2AB79B3F00EAB522 /* PostList */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3DAF904B2AB79B3F00EAB522 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				3DAF904C2AB79B5800EAB522 /* MockPostListPresenterToInteractor.swift */,
+				3D9361852AB7B4B6005D89D3 /* MockPostListRemoteProvider.swift */,
+				3D9361872AB7B4EE005D89D3 /* MockPostListLocalProvider.swift */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		3DAF904E2AB79CFC00EAB522 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -381,6 +456,10 @@
 				3DAF8FC82AADFF9200EAB522 /* PBXTargetDependency */,
 			);
 			name = DBPostListAppTests;
+			packageProductDependencies = (
+				3DAF904F2AB79CFC00EAB522 /* Realm */,
+				3DAF90512AB79CFC00EAB522 /* RealmSwift */,
+			);
 			productName = DBPostListAppTests;
 			productReference = 3DAF8FC62AADFF9200EAB522 /* DBPostListAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -511,7 +590,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D9361842AB7B36B005D89D3 /* PostListInteractorTests.swift in Sources */,
+				3DAF90492AB79ACF00EAB522 /* PostListPresenterTests.swift in Sources */,
 				3DAF8FCB2AADFF9200EAB522 /* DBPostListAppTests.swift in Sources */,
+				3D9361862AB7B4B6005D89D3 /* MockPostListRemoteProvider.swift in Sources */,
+				3D9361882AB7B4EE005D89D3 /* MockPostListLocalProvider.swift in Sources */,
+				3DAF904D2AB79B5800EAB522 /* MockPostListPresenterToInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,6 +945,16 @@
 			productName = Realm;
 		};
 		3DAF90262AB26BC300EAB522 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DAF90232AB26BC300EAB522 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		3DAF904F2AB79CFC00EAB522 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DAF90232AB26BC300EAB522 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		3DAF90512AB79CFC00EAB522 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3DAF90232AB26BC300EAB522 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;

@@ -37,7 +37,7 @@ class PostListInteractor: PostListPresenterToInteractorProtocol {
         .eraseToAnyPublisher()
     }
     
-    func getfavoritePosts(userID: Int) -> [Post] {
+    func getFavoritePosts(userID: Int) -> [Post] {
         postListLocalProvider.getFavoritePosts(userID: userID).map {
             Post(id: $0.postID , title: $0.title, detail: $0.body, isFavorite: $0.isFavorite)
         }
