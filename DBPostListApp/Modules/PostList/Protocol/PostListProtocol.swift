@@ -8,11 +8,6 @@
 import UIKit
 import Combine
 
-protocol PostListPresenterToViewProtocol: AnyObject {
-    func onPostListResponseSuccess()
-    func onPostListResponseFailed(error: String)
-}
-
 protocol PostListViewToPresenterProtocol {
     func getUserPosts(userID: Int)
     func setPostView(postType index: Int)
@@ -25,19 +20,19 @@ protocol PostListPresenterToRouterProtocol {
 }
 
 protocol PostListPresenterToInteractorProtocol {
-    func getUserPosts(userID: Int) -> AnyPublisher<[Post]?, NetworkErrors>
+    func getUserPosts(userID: Int) -> AnyPublisher<[Post]?, NetworkError>
     func getfavoritePosts(userID: Int) -> [Post]
     func setFavoritePost(_ post: Post)
     func getPostsFromLocalDatasource(_ userID: Int) -> [Post]
 }
 
 protocol PostListInteractorToRemoteProviderProtocol {
-    func getUserPosts(userID: String) -> AnyPublisher<[PostDTO], NetworkErrors>
+    func getUserPosts(userID: String) -> AnyPublisher<[PostDTO], NetworkError>
 }
 
 protocol PostListInteractorToLocalProviderProtocol {
     func getUserPosts(userID: Int) -> [PostModel]
     func getFavoritePosts(userID: Int) -> [PostModel]
-    func savePosts(userID: Int, posts: [Post])
+    func savePosts(posts: [PostModel])
     func setFavoritePostStatus(postID: Int, status: Bool)
 }

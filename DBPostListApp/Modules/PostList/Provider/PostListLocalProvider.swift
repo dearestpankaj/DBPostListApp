@@ -26,18 +26,17 @@ class PostListLocalProvider: PostListInteractorToLocalProviderProtocol {
         return Array(aa)
     }
     
-    func savePosts(userID: Int, posts: [Post]) {
+    func savePosts(posts: [PostModel]) {
         let realm = try! Realm()
         
         for post in posts {
-            let existingPosts = realm.objects(PostModel.self).where { $0.postID == post.id }
+            let existingPosts = realm.objects(PostModel.self).where { $0.postID == post.postID }
             if existingPosts.count < 1 {
                 try! realm.write {
                     realm.create(PostModel.self, value: post, update: .modified)
                 }
             }
         }
-        
     }
     
     func setFavoritePostStatus(postID: Int, status: Bool) {

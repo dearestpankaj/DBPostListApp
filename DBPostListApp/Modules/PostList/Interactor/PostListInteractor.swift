@@ -20,16 +20,21 @@ class PostListInteractor: PostListPresenterToInteractorProtocol {
         self.postListLocalProvider = postListLocalProvider
     }
     
-    func getUserPosts(userID: Int) -> AnyPublisher<[Post]?, NetworkErrors> {
-        postListRemoteProvider.getUserPosts(userID: String(userID)).map { [weak self] postDtoArray in
-            let posts = postDtoArray.map {
-                Post(id: $0.id, title: $0.title, detail: $0.body, isFavorite: false)
+    func getUserPosts(userID: Int) -> AnyPublisher<[Post]?, NetworkError> {
+        postListRemoteProvider.getUserPosts(userID: String(userID)).tryMap { [weak self] postDtoArray in
+            if postDtoArray.count == 0 {
+                throw NetworkError.noPostFound
             }
-            self?.postListLocalProvider.savePosts(userID: userID, posts: posts)
+            let posts = postDtoArray.map {
+                PostModel(userID: userID, postID: $0.id, title: $0.title, body: $0.body)
+            }
+            self?.postListLocalProvider.savePosts(posts: posts)
             return self?.postListLocalProvider.getUserPosts(userID: userID).map {
                 Post(id: $0.postID, title: $0.title, detail: $0.body, isFavorite: $0.isFavorite)
             }
-        }.eraseToAnyPublisher()
+        }
+        .mapError { $0 as! NetworkError }
+        .eraseToAnyPublisher()
     }
     
     func getfavoritePosts(userID: Int) -> [Post] {
@@ -40,7 +45,6 @@ class PostListInteractor: PostListPresenterToInteractorProtocol {
     
     func setFavoritePost(_ post: Post) {
         postListLocalProvider.setFavoritePostStatus(postID: post.id, status: post.isFavorite)
-        let array = postListLocalProvider.getFavoritePosts(userID: 1)
     }
     
     func getPostsFromLocalDatasource(_ userID: Int) -> [Post] {

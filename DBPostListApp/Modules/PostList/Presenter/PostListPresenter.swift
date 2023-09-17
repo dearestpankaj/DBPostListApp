@@ -10,7 +10,6 @@ import Combine
 
 
 class PostListPresenter: PostListViewToPresenterProtocol {
-    weak var view: PostListPresenterToViewProtocol?
     
     private let viewModel: PostListViewModel
     private let interactor: PostListPresenterToInteractorProtocol
@@ -18,31 +17,31 @@ class PostListPresenter: PostListViewToPresenterProtocol {
     private var cancellable: AnyCancellable?
     
     init(
-        view: PostListPresenterToViewProtocol? = nil,
         viewModel: PostListViewModel,
         interactor: PostListPresenterToInteractorProtocol
     ) {
-        self.view = view
         self.viewModel = viewModel
         self.interactor = interactor
     }
     
     func getUserPosts(userID: Int) {
         viewModel.userID = userID
+        viewModel.isLoading = true
+        
         cancellable = interactor.getUserPosts(userID: viewModel.userID).sink { [weak self] result in
+            self?.viewModel.isLoading = false
             switch result {
-            case .finished:
-                print("success")
             case .failure(let error):
-                self?.view?.onPostListResponseFailed(error: error.localizedDescription)
+                self?.viewModel.errorMessage = error.description
+            default:
+                break
             }
         } receiveValue: { [weak self] posts in
             guard let posts = posts else {
-                self?.view?.onPostListResponseFailed(error: "")
+                self?.viewModel.errorMessage = "Posts not found for the user"
                 return
             }
             self?.viewModel.posts = posts
-            self?.view?.onPostListResponseSuccess()
         }
     }
     
@@ -51,13 +50,13 @@ class PostListPresenter: PostListViewToPresenterProtocol {
             return
         }
         viewModel.selectedViewType = postViewType
+        
         switch viewModel.selectedViewType {
         case .all:
             viewModel.posts = interactor.getPostsFromLocalDatasource(viewModel.userID)
         case .favorite:
             viewModel.posts = interactor.getfavoritePosts(userID: viewModel.userID)
         }
-        view?.onPostListResponseSuccess()
     }
     
     func setFavoritePost(post: Post) {
@@ -67,6 +66,5 @@ class PostListPresenter: PostListViewToPresenterProtocol {
         } else {
             viewModel.posts = interactor.getPostsFromLocalDatasource(viewModel.userID)
         }
-        view?.onPostListResponseSuccess()
     }
 }

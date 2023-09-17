@@ -16,7 +16,6 @@ class PostListRouter {
         let interactor = PostListInteractor(postListRemoteProvider: provider, postListLocalProvider: localProvider)
         let presenter = PostListPresenter(viewModel: viewModel, interactor: interactor)
         let view = PostListViewController(userID, viewModel, presenter)
-        presenter.view = view
         
         return view
     }
