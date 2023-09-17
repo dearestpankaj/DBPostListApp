@@ -21,7 +21,7 @@ protocol PostListPresenterToRouterProtocol {
 
 protocol PostListPresenterToInteractorProtocol {
     func getUserPosts(userID: Int) -> AnyPublisher<[Post]?, NetworkError>
-    func getfavoritePosts(userID: Int) -> [Post]
+    func getFavoritePosts(userID: Int) -> [Post]
     func setFavoritePost(_ post: Post)
     func getPostsFromLocalDatasource(_ userID: Int) -> [Post]
 }
